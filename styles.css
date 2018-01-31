@@ -1,0 +1,251 @@
+.wrapper {
+  display: grid;
+  /* grid-gap: 20px; */
+  /* grid-template-rows: 50px repeat(auto-fit, minmax(200px, 1fr)); */
+}
+
+.menu {
+  background: var(--black);
+}
+
+#menu-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.logo {
+  grid-column: 1 / 7;
+  color: var(--yellow);
+  text-decoration: none;
+  font-family: "Cookie", cursive;
+  font-size: 2em;
+}
+
+a:link {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.menu-right {
+  display: none;
+  text-transform: uppercase;
+}
+
+.menu-button {
+  grid-column: 10 / 12;
+  background: var(--yellow);
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#logo {
+  color: var(--yellow);
+}
+
+.hero {
+  background: url("./src/img/header-bg.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.hero-content {
+  display: grid;
+  grid-gap: 20px;
+  color: #fff;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.hero-content h2 {
+  font-size: 4em;
+}
+
+.hero button {
+  background: var(--yellow);
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 700;
+  width: 50%;
+  justify-self: center;
+}
+
+.section-headers {
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+
+.services {
+  background: #fff;
+  display: grid;
+  grid-gap: 20px 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.section-headers__container {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.section-headers__container h3 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.section-headers__container p {
+  color: #868e96;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+
+.service {
+  text-align: center;
+}
+
+.col-title {
+  font-weight: bold;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.col-text {
+  line-height: 1.5;
+  color: #868e96;
+  line-height: 1.75;
+  margin: 0 auto 3em auto;
+  padding: 1em;
+}
+
+.portfolio {
+  background: var(--grey);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  margin-bottom: 2em;
+}
+
+.portfolio-cells {
+  text-align: center;
+}
+
+.portfolio img {
+  width: 90%;
+  height: 70%;
+  cursor: pointer;
+}
+
+.col-text__portfolio {
+  line-height: 1.5;
+  color: #868e96;
+  line-height: 1.75;
+  margin: 0 auto 3em auto;
+}
+
+.about {
+  background: #fff;
+}
+
+.about-timeline {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 3fr;
+}
+
+.about-timeline img {
+  border-radius: 50%;
+  border: 5px solid rgba(233, 232, 232, 0.788);
+  width: 90%;
+}
+
+.about-story-circle {
+  background: var(--yellow);
+  color: white;
+  border-radius: 50%;
+  width: max-content;
+  border: 5px solid rgba(233, 232, 232, 0.788);
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (min-width: 406px) {
+  .portfolio img {
+    width: 376px;
+    height: 282px;
+  }
+}
+
+@media (min-width: 576px) {
+  .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio img {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .services {
+    background: #fff;
+    display: grid;
+    grid-gap: 20px 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .service h4 {
+    font-weight: bold;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-button {
+    display: none;
+  }
+
+  #menu-list {
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  .menu-right {
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .portfolio img {
+    width: 290px;
+    height: 217.5px;
+  }
+}
